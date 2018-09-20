@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import SearchBar from './components/SearchBar';
-import List from './components/List';
+import SearchBar from './components/SearchBar/SearchBar.js';
+import List from './components/List/List.js';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +24,10 @@ class App extends Component {
       .catch(err => alert(err));
   }
 
-
+  filterNames(e){
+    this.setState({users: this.state.store.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))})
+  }
+  
   render() {
     const {users} = this.state;
     return (

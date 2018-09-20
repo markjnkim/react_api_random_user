@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import LoadingHOC from './LoadingHoc';
+import React from 'react';
+import LoadingHOC from '../LoadingHOC.js';
 import '../styles/main.css'; 
 
 const List = props => {

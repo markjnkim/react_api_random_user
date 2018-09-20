@@ -5,3 +5,5 @@ const SearchBar = props => (
     <input className="searchBar" type="text" placeholder="search user" onChange={props.searchFunc}/>
   </div>
 );
+
+export default SearchBar;
